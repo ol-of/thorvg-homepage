@@ -52,7 +52,6 @@ function getRouteState() {
 }
 
 const primaryNav = [
-  { key: "home", label: "Home", href: localRoute("") },
   { key: "about", label: "About", href: localRoute("about/") },
   { key: "showcase", label: "Showcase", href: localRoute("showcase/") },
   { key: "docs", label: "Docs", href: localRoute("docs/") },
@@ -94,7 +93,7 @@ function themeIcon(theme) {
 function buildLink(link, current, className) {
   const activeClass = link.key === current ? " is-current" : "";
   const externalAttrs = link.external ? ' target="_blank" rel="noopener noreferrer"' : "";
-  const icon = link.external ? externalIcon() : "";
+  const icon = className === "site-drawer-link" && link.external ? externalIcon() : "";
   return `<a class="${className}${activeClass}" href="${link.href}"${externalAttrs}>${link.label}${icon}</a>`;
 }
 

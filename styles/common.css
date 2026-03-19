@@ -4,24 +4,24 @@
   --font-mono: "JetBrains Mono", Roboto Mono, monospace;
 
   color-scheme: light;
-  --background-color: #f5f7fb;
-  --foreground-color: #09111f;
-  --muted-color: #5f6b7e;
-  --hover-color: rgba(8, 16, 32, 0.06);
-  --color-text-brand: #0f6bd9;
+  --background-color: #ffffff;
+  --foreground-color: #121826;
+  --muted-color: #5f6b7a;
+  --hover-color: rgba(18, 24, 38, 0.06);
+  --color-text-brand: #2563eb;
   --scrollbar-color: color-mix(in oklab, #0d0d0d 30%, transparent);
 
-  --primary-color: #1c2433;
-  --secondary-color: #3b4557;
+  --primary-color: #121826;
+  --secondary-color: #3b4656;
   --content-background-color: #ffffff;
-  --accent-color: #b2f2e9;
-  --accent-soft: #d8fff3;
-  --accent-strong: #0a7e69;
-  --surface-muted: #edf2f8;
-  --surface-elevated: rgba(255, 255, 255, 0.9);
-  --surface-hover: rgba(10, 24, 44, 0.06);
-  --border-color: rgba(9, 17, 31, 0.08);
-  --card-shadow: 0 20px 40px rgba(13, 23, 38, 0.06);
+  --accent-color: #dbeafe;
+  --accent-soft: #eff6ff;
+  --accent-strong: #2563eb;
+  --surface-muted: #f6f8fb;
+  --surface-elevated: rgba(255, 255, 255, 0.96);
+  --surface-hover: rgba(18, 24, 38, 0.06);
+  --border-color: rgba(18, 24, 38, 0.08);
+  --card-shadow: 0 18px 36px rgba(15, 23, 42, 0.06);
 
   --code-border-radius: 6px;
   --code-border-color: rgba(9, 17, 31, 0.12);
@@ -44,23 +44,23 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --background-color: #07111d;
-  --foreground-color: #f3f7fb;
-  --muted-color: #9caac0;
+  --background-color: #0f172a;
+  --foreground-color: #f8fafc;
+  --muted-color: #94a3b8;
   --hover-color: rgba(255, 255, 255, 0.06);
-  --color-text-brand: #8cd1ff;
+  --color-text-brand: #93c5fd;
   --scrollbar-color: color-mix(in oklab, #ffffff 26%, transparent);
-  --primary-color: #f3f7fb;
-  --secondary-color: #c3d0e1;
-  --content-background-color: #0d1725;
-  --accent-color: #0e6051;
-  --accent-soft: #173f36;
-  --accent-strong: #76f0d3;
-  --surface-muted: #0f1b2b;
-  --surface-elevated: rgba(12, 23, 36, 0.9);
+  --primary-color: #f8fafc;
+  --secondary-color: #cbd5e1;
+  --content-background-color: #111827;
+  --accent-color: #172554;
+  --accent-soft: #1e3a8a;
+  --accent-strong: #93c5fd;
+  --surface-muted: #111827;
+  --surface-elevated: rgba(17, 24, 39, 0.94);
   --surface-hover: rgba(255, 255, 255, 0.08);
   --border-color: rgba(255, 255, 255, 0.1);
-  --card-shadow: 0 20px 40px rgba(0, 0, 0, 0.32);
+  --card-shadow: 0 18px 36px rgba(0, 0, 0, 0.3);
   --code-border-color: rgba(255, 255, 255, 0.12);
 }
 
