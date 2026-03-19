@@ -89,6 +89,7 @@
   border: 1px solid var(--code-border-color);
   border-radius: 0.5rem;
   box-sizing: border-box;
+  background: var(--content-background-color);
 }
 
 .sample video, .example-container img {

@@ -16,7 +16,7 @@
 .collection-small-item, .collection-medium-item {
   border: 1px solid var(--code-border-color);
   border-radius: 0.5rem;
-  background-color: #fff;
+  background-color: var(--content-background-color);
   padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
@@ -46,7 +46,7 @@
 .collection-item-text {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #474747;
+  color: var(--foreground-color);
   text-align: center;
   line-height: 1.5rem;
 }

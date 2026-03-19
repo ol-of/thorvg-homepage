@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        const hostedBase = "/thorvg.site/";
+        if (window.location.protocol !== "file:") {
+          document.write('<base href="' + hostedBase + '" />');
+          return;
+        }
+        const routePatterns = [
+          "/docs/tutorial/index.html",
+          "/docs/apis/index.html",
+          "/tools/playground/index.html",
+          "/tools/viewer/index.html",
+          "/showcase/index.html",
+          "/blogs/index.html",
+          "/about/index.html",
+          "/tutorial/index.html",
+          "/viewer/index.html",
+          "/api/index.html",
+          "/docs/index.html",
+          "/tools/index.html",
+          "/index.html"
+        ];
+        const pathname = window.location.pathname;
+        const matched = routePatterns.find((route) => pathname.endsWith(route));
+        const rootPath = ((matched ? pathname.slice(0, -matched.length) : pathname.replace(/[^/]*$/, "")) || "") + "/";
+        document.write('<base href="' + new URL(rootPath, window.location.href).href + '" />');
+      })();
+    </script>
+    <title>Tools | ThorVG</title>
+    <meta name="description" content="ThorVG tools hub for Playground and Viewer." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/site.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <main class="page-shell">
+      <section class="section-block">
+        <div class="content-panel">
+          <span class="eyebrow">Tools Hub</span>
+          <h1 class="page-title">Interactive utilities live here</h1>
+          <p class="page-intro">
+            Tools are separated from documentation so visitors can distinguish between reading about ThorVG and using ThorVG-powered
+            utilities directly.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="hub-grid">
+          <a class="hub-card" href="tools/playground/">
+            <span class="card-tag">Playground</span>
+            <h2 class="card-title">Reserved for interactive experiments</h2>
+            <p class="card-copy">The URL structure is fixed now so the actual playground experience can be integrated in a later pass.</p>
+            <div class="card-meta">Open Playground</div>
+          </a>
+          <a class="hub-card" href="tools/viewer/">
+            <span class="card-tag">Viewer</span>
+            <h2 class="card-title">Existing ThorVG Viewer</h2>
+            <p class="card-copy">Keep the current viewer experience, but relocate it under the tools umbrella.</p>
+            <div class="card-meta">Open Viewer</div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

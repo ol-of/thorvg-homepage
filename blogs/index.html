@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      (function () {
+        const hostedBase = "/thorvg.site/";
+        if (window.location.protocol !== "file:") {
+          document.write('<base href="' + hostedBase + '" />');
+          return;
+        }
+        const routePatterns = [
+          "/docs/tutorial/index.html",
+          "/docs/apis/index.html",
+          "/tools/playground/index.html",
+          "/tools/viewer/index.html",
+          "/showcase/index.html",
+          "/blogs/index.html",
+          "/about/index.html",
+          "/tutorial/index.html",
+          "/viewer/index.html",
+          "/api/index.html",
+          "/docs/index.html",
+          "/tools/index.html",
+          "/index.html"
+        ];
+        const pathname = window.location.pathname;
+        const matched = routePatterns.find((route) => pathname.endsWith(route));
+        const rootPath = ((matched ? pathname.slice(0, -matched.length) : pathname.replace(/[^/]*$/, "")) || "") + "/";
+        document.write('<base href="' + new URL(rootPath, window.location.href).href + '" />');
+      })();
+    </script>
+    <title>Blogs | ThorVG</title>
+    <meta name="description" content="ThorVG blog hub." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/site.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <main class="page-shell">
+      <section class="section-block">
+        <div class="notice-card">
+          <span class="eyebrow">Blogs</span>
+          <h1 class="page-title">Blog content will be routed here</h1>
+          <p class="page-intro">
+            The renewed information architecture now reserves a stable top-level path for editorial updates. Detailed content wiring
+            can be added in the next pass without revisiting the global navigation.
+          </p>
+          <div class="notice-actions">
+            <a class="button-primary" href="https://github.com/thorvg/thorvg/releases" target="_blank" rel="noopener noreferrer">See Releases</a>
+            <a class="button-secondary" href="docs/">Go to Docs</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
