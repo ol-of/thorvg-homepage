@@ -151,18 +151,20 @@ section[id] {
 
 .prose-vercel :where(h1) {
   font-size: 2.8em;
-  font-weight: 500;
-  margin-top: 0.5em;
-  margin-bottom: 1em;
-  line-height: 1.3333333;
+  font-weight: 600;
+  margin-top: 0.25em;
+  margin-bottom: 0.9em;
+  line-height: 1.14;
+  letter-spacing: -0.04em;
 }
 
 .prose-vercel :where(h2) {
-  font-size: 2.1em;
-  font-weight: 500;
-  margin-top: 1.6em;
-  margin-bottom: 1em;
-  line-height: 1.3333333;
+  font-size: 2em;
+  font-weight: 600;
+  margin-top: 1.9em;
+  margin-bottom: 0.9em;
+  line-height: 1.14;
+  letter-spacing: -0.04em;
 }
 
 .prose-vercel :where(h2):not(:where([class~=not-prose],[class~=not-prose] *)) {
@@ -173,12 +175,12 @@ section[id] {
 }
 
 .prose-vercel :where(h3):not(:where([class~=not-prose],[class~=not-prose] *)) {
-  font-size: 1.55em;
+  font-size: 1.42em;
   font-weight: 600;
-  margin-top: 0.6em;
-  margin-bottom: .6em;
-  padding-top: 1.2em;
-  line-height: 1.6;
+  margin-top: 0.5em;
+  margin-bottom: .55em;
+  padding-top: 1.05em;
+  line-height: 1.45;
   color: var(--secondary-color);
   scroll-margin-top: 51px;
 }
@@ -188,8 +190,8 @@ section[id] {
 }
 
 .prose :where(p):not(:where([class~=not-prose],[class~=not-prose] *)) {
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
+  margin-top: 0.85em;
+  margin-bottom: 0.85em;
 }
 
 .prose :where(ul):not(:where([class~=not-prose],[class~=not-prose] *)) {

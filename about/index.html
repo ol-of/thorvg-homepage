@@ -56,7 +56,8 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" href="styles/common.css">
         <link rel="stylesheet" href="styles/site.css">
@@ -107,11 +108,79 @@
             <a href="viewer/">Viewer</a>
         </nav>
 
-        <main class="main">
-            <div class="container fade-in-and-move-up-on-load">
-                <div class="columns py-6">
+        <main class="main about-page">
+            <div class="container about-container fade-in-and-move-up-on-load">
+                <section class="about-hero">
+                    <div class="about-hero-copy">
+                        <span class="eyebrow">About</span>
+                        <h1 class="page-title">ThorVG is built to keep vector rendering capable, portable, and small.</h1>
+                        <p class="page-intro">This page keeps the existing technical detail, but frames it more clearly: what ThorVG supports, how the engine is structured, where it runs, and how teams are already using it in practice.</p>
+                        <div class="hero-actions about-hero-actions">
+                            <a class="button-primary" href="docs/index.html">Start with Docs</a>
+                            <a class="button-secondary" href="showcase/index.html">See Showcase</a>
+                        </div>
+                    </div>
+                    <aside class="about-hero-panel">
+                        <div class="product-panel-window about-panel-window">
+                            <div class="product-window-bar"><span></span><span></span><span></span></div>
+                            <div class="product-window-content about-panel-content">
+                                <div class="product-stack-card">
+                                    <span class="stack-label">Coverage</span>
+                                    <div class="stack-line"><strong>12 sections</strong><span>engine, formats, tooling, adoption</span></div>
+                                    <div class="stack-pill-row">
+                                        <span>SVG</span>
+                                        <span>Lottie</span>
+                                        <span>Smart Rendering</span>
+                                        <span>Viewer</span>
+                                    </div>
+                                </div>
+                                <div class="product-stack-card is-muted">
+                                    <span class="stack-label">Platforms</span>
+                                    <div class="stack-route-grid">
+                                        <span>Linux</span>
+                                        <span>macOS</span>
+                                        <span>Windows</span>
+                                        <span>iOS</span>
+                                        <span>Android</span>
+                                        <span>Web</span>
+                                    </div>
+                                </div>
+                                <div class="about-panel-links">
+                                    <a href="#structural-design">Structural Design</a>
+                                    <a href="#render-backends">Render Backends</a>
+                                    <a href="#in-practice">In Practice</a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </section>
+
+                <section class="about-overview">
+                    <div class="hub-grid hub-grid-product about-overview-grid">
+                        <a class="hub-card" href="#supported-latforms">
+                            <span class="card-tag">Runtime</span>
+                            <h2 class="card-title">Broad platform coverage</h2>
+                            <p class="card-copy">ThorVG is already used across desktop, mobile, web, and embedded-oriented environments.</p>
+                            <span class="card-meta">Supported Platforms</span>
+                        </a>
+                        <a class="hub-card" href="#structural-design">
+                            <span class="card-tag">Architecture</span>
+                            <h2 class="card-title">Modular engine design</h2>
+                            <p class="card-copy">A single binary, selectively buildable pieces, and renderer abstraction keep integration practical.</p>
+                            <span class="card-meta">Structural Design</span>
+                        </a>
+                        <a class="hub-card" href="#in-practice">
+                            <span class="card-tag">Adoption</span>
+                            <h2 class="card-title">Already used in products</h2>
+                            <p class="card-copy">The page ends with concrete examples showing how ThorVG is deployed in real software.</p>
+                            <span class="card-meta">In Practice</span>
+                        </a>
+                    </div>
+                </section>
+
+                <div class="columns py-6 about-content-layout">
                     <div class="column is-9">
-                        <article class="prose prose-vercel">
+                        <article class="prose prose-vercel about-article">
                             <section id="about-thorvg">
                                 <h1>About ThorVG</h1>
                                 <p>ThorVG (Thor Vector Graphics) is an open-source graphics library designed for creating vector-based scenes and animations. It combines immense power with remarkable lightweight efficiency, as Thor embodies a dual meaning—symbolizing both thunderous strength and lightning-fast agility. Embracing the philosophy of simpler is better, the ThorVG project provides intuitive, user-friendly interfaces while maintaining a compact footprint and minimal overhead.</p>
@@ -424,30 +493,34 @@
                         </article>
                     </div>
                     <div class="column is-3">
-                        <div class="content-toc has-background-light py-5">
+                        <div class="content-toc about-toc has-background-light py-5">
                             <nav aria-label="Table of contents" role="navigation">
                                 <ul class="toc-list">
                                     <li>
-                                        <a class="toc-header" href="#"><i class="icon icon-text-align-left"></i>Table of Contents</a>
+                                        <a class="toc-header" href="#">On this page</a>
                                     </li>
                                     <li class="toc-children">
                                         <ul>
-                                            <li><a href="about/#about-thorvg">About ThorVG</a></li>
-                                            <li><a href="about/#supported-latforms">Supported Platforms</a></li>
-                                            <li><a href="about/#structural-design">Structural Design</a></li>
-                                            <li><a href="about/#render-backends">Render Backends</a></li>
-                                            <li><a href="about/#threading">Threading</a></li>
-                                            <li><a href="about/#smart-rendering">Smart Rendering</a></li>
-                                            <li><a href="about/#svg">SVG</a></li>
-                                            <li><a href="about/#lottie">Lottie</a></li>
-                                            <li><a href="about/#thorvg-viewer">ThorVG Viewer</a></li>
-                                            <li><a href="about/#in-practice">In Practice</a></li>
-                                            <li><a href="about/#contributors">Contributors</a></li>
-                                            <li><a href="about/#sponsors">Sponsors</a></li>
+                                            <li><a href="#about-thorvg">About ThorVG</a></li>
+                                            <li><a href="#supported-latforms">Supported Platforms</a></li>
+                                            <li><a href="#structural-design">Structural Design</a></li>
+                                            <li><a href="#render-backends">Render Backends</a></li>
+                                            <li><a href="#threading">Threading</a></li>
+                                            <li><a href="#smart-rendering">Smart Rendering</a></li>
+                                            <li><a href="#svg">SVG</a></li>
+                                            <li><a href="#lottie">Lottie</a></li>
+                                            <li><a href="#thorvg-viewer">ThorVG Viewer</a></li>
+                                            <li><a href="#in-practice">In Practice</a></li>
+                                            <li><a href="#contributors">Contributors</a></li>
+                                            <li><a href="#sponsors">Sponsors</a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </nav>
+                            <div class="about-toc-utility">
+                                <a href="docs/index.html">Docs hub</a>
+                                <a href="https://github.com/thorvg/thorvg/releases" target="_blank" rel="noopener noreferrer">Release</a>
+                            </div>
                         </div>
                     </div>
                 </div>
