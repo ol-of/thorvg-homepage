@@ -56,13 +56,13 @@ const primaryNav = [
   { key: "showcase", label: "Showcase", href: localRoute("showcase/") },
   { key: "docs", label: "Docs", href: localRoute("docs/") },
   { key: "blogs", label: "Blogs", href: localRoute("blogs/") },
-  { key: "tools", label: "Tools", href: localRoute("tools/") },
-  { key: "wiki", label: "Deep Wiki", href: "https://deepwiki.com/thorvg/thorvg", external: true }
+  { key: "tools", label: "Tools", href: localRoute("tools/") }
 ];
 
 const utilityNav = [
   { key: "release", label: "Release", href: "https://github.com/thorvg/thorvg/releases", external: true },
-  { key: "signin", label: "GitHub", href: "https://github.com/thorvg/thorvg", external: true }
+  { key: "signin", label: "GitHub", href: "https://github.com/thorvg/thorvg", external: true },
+  { key: "wiki", label: "Deep Wiki", href: "https://deepwiki.com/thorvg/thorvg", external: true }
 ];
 
 function externalIcon() {
@@ -103,11 +103,8 @@ function buildHeader(current) {
   return `
     <div class="site-header-inner">
       <a class="site-brand" href="${localRoute("")}" aria-label="ThorVG Home">
-        <img class="site-brand-mark" src="logo/ThorVG-simple.svg" alt="ThorVG" />
-        <span class="site-brand-label">
-          <span class="site-brand-name">ThorVG</span>
-          <span class="site-brand-subtitle">Vector Graphics Engine</span>
-        </span>
+        <img class="site-brand-logo site-brand-logo-light" src="logo/thorvg/ThorVG_Mono_Black.svg" alt="ThorVG" />
+        <img class="site-brand-logo site-brand-logo-dark" src="logo/thorvg/ThorVG_Full_Color.svg" alt="ThorVG" />
       </a>
       <nav class="site-nav" aria-label="Primary">
         ${primaryNav.map((link) => buildLink(link, current, "site-nav-link")).join("")}
@@ -141,11 +138,8 @@ function buildFooter() {
     <div class="site-footer-inner">
       <div class="site-footer-top">
         <a class="site-brand" href="${localRoute("")}" aria-label="ThorVG Home">
-          <img class="site-brand-mark" src="logo/ThorVG-simple.svg" alt="ThorVG" />
-          <span class="site-brand-label">
-            <span class="site-brand-name">ThorVG</span>
-            <span class="site-brand-subtitle">Simpler is better</span>
-          </span>
+          <img class="site-brand-logo site-brand-logo-light" src="logo/thorvg/ThorVG_Mono_Black.svg" alt="ThorVG" />
+          <img class="site-brand-logo site-brand-logo-dark" src="logo/thorvg/ThorVG_Full_Color.svg" alt="ThorVG" />
         </a>
         <div class="site-footer-links">
           <a href="${localRoute("about/")}">About</a>
