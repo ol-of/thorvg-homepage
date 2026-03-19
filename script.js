@@ -61,7 +61,8 @@ const primaryNav = [
 ];
 
 const utilityNav = [
-  { key: "release", label: "Release", href: "https://github.com/thorvg/thorvg/releases", external: true }
+  { key: "release", label: "Release", href: "https://github.com/thorvg/thorvg/releases", external: true },
+  { key: "signin", label: "GitHub", href: "https://github.com/thorvg/thorvg", external: true }
 ];
 
 function externalIcon() {
