@@ -1,6 +1,6 @@
 :root {
   --font-headline: Poppins, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  --font-sans: -apple-system, "Open Sans", BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-sans: "Google Sans", "Google Sans Text", "Product Sans", "Noto Sans", sans-serif;
   --font-mono: "JetBrains Mono", Roboto Mono, monospace;
 
   color-scheme: light;
@@ -86,6 +86,7 @@ h1, h2, h3 {
 
 body {
   font-family: var(--font-sans);
+  font-optical-sizing: auto;
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
