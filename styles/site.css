@@ -508,6 +508,10 @@
   margin-top: 1rem;
 }
 
+.step-title {
+  margin-top: 1rem;
+}
+
 .card-meta {
   margin-top: 1.05rem;
   color: var(--foreground-color);
