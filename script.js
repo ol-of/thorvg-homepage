@@ -45,7 +45,7 @@ function getRouteState() {
   if (path === "/" || path === "") return { current: "home" };
   if (path.startsWith("/about")) return { current: "about" };
   if (path.startsWith("/showcase")) return { current: "showcase" };
-  if (path.startsWith("/blogs")) return { current: "blogs" };
+  if (path.startsWith("/blog")) return { current: "blog" };
   if (path.startsWith("/docs") || path.startsWith("/tutorial") || path.startsWith("/api")) return { current: "docs" };
   if (path.startsWith("/tools") || path.startsWith("/viewer")) return { current: "tools" };
   return { current: "home" };
@@ -55,7 +55,7 @@ const primaryNav = [
   { key: "about", label: "About", href: localRoute("about/") },
   { key: "showcase", label: "Showcase", href: localRoute("showcase/") },
   { key: "docs", label: "Docs", href: localRoute("docs/") },
-  { key: "blogs", label: "Blogs", href: localRoute("blogs/") },
+  { key: "blog", label: "Blog", href: localRoute("blog/") },
   { key: "tools", label: "Tools", href: localRoute("tools/") }
 ];
 
@@ -146,7 +146,7 @@ function buildFooter() {
           <a href="${localRoute("showcase/")}">Showcase</a>
           <a href="${localRoute("docs/")}">Docs</a>
           <a href="${localRoute("tools/")}">Tools</a>
-          <a href="${localRoute("blogs/")}">Blogs</a>
+          <a href="${localRoute("blog/")}">Blog</a>
         </div>
       </div>
       <div class="site-footer-bottom">

@@ -15,7 +15,7 @@ Main navigation:
 - `About`
 - `Showcase`
 - `Docs`
-- `Blogs`
+- `Blog`
 - `Tools`
 - `Deep Wiki`
 
@@ -40,7 +40,7 @@ Sub-navigation:
 - `/docs`
 - `/docs/tutorial`
 - `/docs/apis`
-- `/blogs`
+- `/blog`
 - `/tools`
 - `/tools/playground`
 - `/tools/viewer`
@@ -55,7 +55,7 @@ Sub-navigation:
 - `Docs`: hub page for `Tutorial` and `APIs`.
 - `Docs > Tutorial`: keep the existing tutorial content.
 - `Docs > APIs`: keep the existing API content.
-- `Blogs`: keep the existing blogs structure and purpose.
+- `Blog`: keep the existing blog structure and purpose.
 - `Tools`: hub page for `Playground` and `Viewer`.
 - `Tools > Playground`: keep the existing playground purpose/content.
 - `Tools > Viewer`: keep the existing viewer purpose/content.

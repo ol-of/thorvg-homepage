@@ -551,6 +551,18 @@
   background: linear-gradient(180deg, #ffffff, var(--surface-muted));
 }
 
+:root[data-theme="dark"] .product-panel-window {
+  background: var(--content-background-color);
+}
+
+:root[data-theme="dark"] .product-window-content {
+  background: var(--content-background-color);
+}
+
+:root[data-theme="dark"] .notice-card-product {
+  background: var(--content-background-color);
+}
+
 .site-footer {
   border-top: 1px solid var(--border-color);
   background: var(--surface-elevated);
