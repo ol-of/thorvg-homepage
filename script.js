@@ -1,5 +1,13 @@
 const THEME_STORAGE_KEY = "thorvg-theme";
 
+function isFileProtocol() {
+  return window.location.protocol === "file:";
+}
+
+function localRoute(path) {
+  return isFileProtocol() ? `${path}index.html` : path;
+}
+
 function getPreferredTheme() {
   const storedTheme = localStorage.getItem(THEME_STORAGE_KEY);
   if (storedTheme === "light" || storedTheme === "dark") return storedTheme;
@@ -44,12 +52,12 @@ function getRouteState() {
 }
 
 const primaryNav = [
-  { key: "home", label: "Home", href: "./" },
-  { key: "about", label: "About", href: "about/" },
-  { key: "showcase", label: "Showcase", href: "showcase/" },
-  { key: "docs", label: "Docs", href: "docs/" },
-  { key: "blogs", label: "Blogs", href: "blogs/" },
-  { key: "tools", label: "Tools", href: "tools/" },
+  { key: "home", label: "Home", href: localRoute("") },
+  { key: "about", label: "About", href: localRoute("about/") },
+  { key: "showcase", label: "Showcase", href: localRoute("showcase/") },
+  { key: "docs", label: "Docs", href: localRoute("docs/") },
+  { key: "blogs", label: "Blogs", href: localRoute("blogs/") },
+  { key: "tools", label: "Tools", href: localRoute("tools/") },
   { key: "wiki", label: "Deep Wiki", href: "https://deepwiki.com/thorvg/thorvg", external: true }
 ];
 
@@ -94,7 +102,7 @@ function buildHeader(current) {
   const theme = document.documentElement.dataset.theme || "light";
   return `
     <div class="site-header-inner">
-      <a class="site-brand" href="./" aria-label="ThorVG Home">
+      <a class="site-brand" href="${localRoute("")}" aria-label="ThorVG Home">
         <img class="site-brand-mark" src="logo/ThorVG-simple.svg" alt="ThorVG" />
         <span class="site-brand-label">
           <span class="site-brand-name">ThorVG</span>
@@ -132,7 +140,7 @@ function buildFooter() {
   return `
     <div class="site-footer-inner">
       <div class="site-footer-top">
-        <a class="site-brand" href="./" aria-label="ThorVG Home">
+        <a class="site-brand" href="${localRoute("")}" aria-label="ThorVG Home">
           <img class="site-brand-mark" src="logo/ThorVG-simple.svg" alt="ThorVG" />
           <span class="site-brand-label">
             <span class="site-brand-name">ThorVG</span>
@@ -140,11 +148,11 @@ function buildFooter() {
           </span>
         </a>
         <div class="site-footer-links">
-          <a href="about/">About</a>
-          <a href="showcase/">Showcase</a>
-          <a href="docs/">Docs</a>
-          <a href="tools/">Tools</a>
-          <a href="blogs/">Blogs</a>
+          <a href="${localRoute("about/")}">About</a>
+          <a href="${localRoute("showcase/")}">Showcase</a>
+          <a href="${localRoute("docs/")}">Docs</a>
+          <a href="${localRoute("tools/")}">Tools</a>
+          <a href="${localRoute("blogs/")}">Blogs</a>
         </div>
       </div>
       <div class="site-footer-bottom">
